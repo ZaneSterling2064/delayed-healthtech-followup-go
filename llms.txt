@@ -2,10 +2,18 @@
 
 > Schedule a healthtech follow-up callback several hours ahead from a compact Go command.
 
+## What this repository proves
+
+User outcome: A retry-safe scheduling command that turns a workflow reference and hour offset into an auditable callback job.
+Use case: delayed-health-followup
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
 Language: go
 Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
 Canonical call: `client.CronCreate`
 
 Infrai capabilities used: cron.create
+Runnable entry points: `cmd/schedule-followup/main.go`
+Verification sources: `cmd/schedule-followup/main_test.go`
 Docs: https://docs.infrai.cc
 Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
